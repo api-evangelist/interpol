@@ -8,10 +8,10 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Police
-  - International
   - Federal Government
+  - International
   - Law Enforcement
+  - Police
 url: >-
   https://raw.githubusercontent.com/api-evangelist/interpol/refs/heads/main/apis.yml
 created: '2024-12-03'
@@ -26,9 +26,9 @@ apis:
       organizations to query notice information.
     humanURL: https://interpol.api.bund.dev
     tags:
+      - International
       - Law Enforcement
       - Notices
-      - International
     properties:
       - type: Documentation
         url: https://interpol.api.bund.dev
