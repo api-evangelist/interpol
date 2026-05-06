@@ -1,0 +1,620 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Interpol Notices API
+  description: Interpol Red, Yellow and UN Notices API
+  tags:
+  - Interpol
+  - API
+  created: '2026-05-06'
+  modified: '2026-05-06'
+capability:
+  consumes:
+  - type: http
+    namespace: interpol
+    baseUri: https://ws-public.interpol.int
+    description: Interpol Notices API HTTP API.
+    resources:
+    - name: notices-v1-red
+      path: /notices/v1/red
+      operations:
+      - name: get-notices-v1-red
+        method: GET
+        description: Get Red Notices
+        inputParameters:
+        - name: forename
+          in: query
+          type: string
+          description: First name
+        - name: name
+          in: query
+          type: string
+          description: Last name
+        - name: nationality
+          in: query
+          type: string
+          description: Two digit country code
+        - name: ageMax
+          in: query
+          type: integer
+          description: maximum age
+        - name: ageMin
+          in: query
+          type: integer
+          description: minimum age
+        - name: freeText
+          in: query
+          type: string
+          description: Free text query
+        - name: sexId
+          in: query
+          type: string
+          description: Free text query
+        - name: arrestWarrantCountryId
+          in: query
+          type: string
+          description: Two digit country code
+        - name: page
+          in: query
+          type: integer
+          description: pagination - starts with 1
+        - name: resultPerPage
+          in: query
+          type: integer
+          description: resultPerPage
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: notices-v1-red-noticeid
+      path: /notices/v1/red/{noticeID}
+      operations:
+      - name: get-notices-v1-red-noticeid
+        method: GET
+        description: Get Red Notice Details
+        inputParameters:
+        - name: noticeID
+          in: path
+          type: string
+          required: true
+          description: Notice ID
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: notices-v1-red-noticeid-images
+      path: /notices/v1/red/{noticeID}/images
+      operations:
+      - name: get-notices-v1-red-noticeid-images
+        method: GET
+        description: Get Red Notice Images
+        inputParameters:
+        - name: noticeID
+          in: path
+          type: string
+          required: true
+          description: Notice ID
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: notices-v1-yellow
+      path: /notices/v1/yellow
+      operations:
+      - name: get-notices-v1-yellow
+        method: GET
+        description: Get Yellow Notices
+        inputParameters:
+        - name: forename
+          in: query
+          type: string
+          description: First name
+        - name: name
+          in: query
+          type: string
+          description: Last name
+        - name: nationality
+          in: query
+          type: string
+          description: Two digit country code
+        - name: ageMax
+          in: query
+          type: integer
+          description: maximum age
+        - name: ageMin
+          in: query
+          type: integer
+          description: minimum age
+        - name: freeText
+          in: query
+          type: string
+          description: Free text query
+        - name: sexId
+          in: query
+          type: string
+          description: Free text query
+        - name: page
+          in: query
+          type: integer
+          description: pagination - starts with 1
+        - name: resultPerPage
+          in: query
+          type: integer
+          description: resultPerPage
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: notices-v1-yellow-noticeid
+      path: /notices/v1/yellow/{noticeID}
+      operations:
+      - name: get-notices-v1-yellow-noticeid
+        method: GET
+        description: Get Yellow Notice Details
+        inputParameters:
+        - name: noticeID
+          in: path
+          type: string
+          required: true
+          description: Notice ID
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: notices-v1-yellow-noticeid-images
+      path: /notices/v1/yellow/{noticeID}/images
+      operations:
+      - name: get-notices-v1-yellow-noticeid-images
+        method: GET
+        description: Get Yellow Notice Images
+        inputParameters:
+        - name: noticeID
+          in: path
+          type: string
+          required: true
+          description: Notice ID
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: notices-v1-un
+      path: /notices/v1/un
+      operations:
+      - name: get-notices-v1-un
+        method: GET
+        description: Get UN Notices
+        inputParameters:
+        - name: name
+          in: query
+          type: string
+          description: Last name
+        - name: unReference
+          in: query
+          type: string
+          description: UN-Referenz
+        - name: unResolution
+          in: query
+          type: integer
+          description: UN-Resolution
+        - name: page
+          in: query
+          type: integer
+          description: pagination - starts with 1
+        - name: resultPerPage
+          in: query
+          type: integer
+          description: resultPerPage
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: notices-v1-un-noticetype-noticeid
+      path: /notices/v1/un/{noticeType}/{noticeID}
+      operations:
+      - name: get-notices-v1-un-noticetype-noticeid
+        method: GET
+        description: Get UN Notice Details
+        inputParameters:
+        - name: noticeID
+          in: path
+          type: string
+          required: true
+          description: Notice ID
+        - name: noticeType
+          in: path
+          type: string
+          required: true
+          description: Notice Type (either 'persons' or 'entities')
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: notices-v1-un-noticetype-noticeid-images
+      path: /notices/v1/un/{noticeType}/{noticeID}/images
+      operations:
+      - name: get-notices-v1-un-noticetype-noticeid-images
+        method: GET
+        description: Get UN Notice Images
+        inputParameters:
+        - name: noticeID
+          in: path
+          type: string
+          required: true
+          description: Notice ID
+        - name: noticeType
+          in: path
+          type: string
+          required: true
+          description: Notice Type (either 'persons' or 'entities')
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: interpol-rest
+    description: REST adapter for Interpol Notices API.
+    resources:
+    - path: /notices/v1/red
+      name: get-notices-v1-red
+      operations:
+      - method: GET
+        name: get-notices-v1-red
+        description: Get Red Notices
+        call: interpol.get-notices-v1-red
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /notices/v1/red/{noticeID}
+      name: get-notices-v1-red-noticeid
+      operations:
+      - method: GET
+        name: get-notices-v1-red-noticeid
+        description: Get Red Notice Details
+        call: interpol.get-notices-v1-red-noticeid
+        with:
+          noticeID: rest.noticeID
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /notices/v1/red/{noticeID}/images
+      name: get-notices-v1-red-noticeid-images
+      operations:
+      - method: GET
+        name: get-notices-v1-red-noticeid-images
+        description: Get Red Notice Images
+        call: interpol.get-notices-v1-red-noticeid-images
+        with:
+          noticeID: rest.noticeID
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /notices/v1/yellow
+      name: get-notices-v1-yellow
+      operations:
+      - method: GET
+        name: get-notices-v1-yellow
+        description: Get Yellow Notices
+        call: interpol.get-notices-v1-yellow
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /notices/v1/yellow/{noticeID}
+      name: get-notices-v1-yellow-noticeid
+      operations:
+      - method: GET
+        name: get-notices-v1-yellow-noticeid
+        description: Get Yellow Notice Details
+        call: interpol.get-notices-v1-yellow-noticeid
+        with:
+          noticeID: rest.noticeID
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /notices/v1/yellow/{noticeID}/images
+      name: get-notices-v1-yellow-noticeid-images
+      operations:
+      - method: GET
+        name: get-notices-v1-yellow-noticeid-images
+        description: Get Yellow Notice Images
+        call: interpol.get-notices-v1-yellow-noticeid-images
+        with:
+          noticeID: rest.noticeID
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /notices/v1/un
+      name: get-notices-v1-un
+      operations:
+      - method: GET
+        name: get-notices-v1-un
+        description: Get UN Notices
+        call: interpol.get-notices-v1-un
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /notices/v1/un/{noticeType}/{noticeID}
+      name: get-notices-v1-un-noticetype-noticeid
+      operations:
+      - method: GET
+        name: get-notices-v1-un-noticetype-noticeid
+        description: Get UN Notice Details
+        call: interpol.get-notices-v1-un-noticetype-noticeid
+        with:
+          noticeID: rest.noticeID
+          noticeType: rest.noticeType
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /notices/v1/un/{noticeType}/{noticeID}/images
+      name: get-notices-v1-un-noticetype-noticeid-images
+      operations:
+      - method: GET
+        name: get-notices-v1-un-noticetype-noticeid-images
+        description: Get UN Notice Images
+        call: interpol.get-notices-v1-un-noticetype-noticeid-images
+        with:
+          noticeID: rest.noticeID
+          noticeType: rest.noticeType
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: interpol-mcp
+    transport: http
+    description: MCP adapter for Interpol Notices API for AI agent use.
+    tools:
+    - name: get-notices-v1-red
+      description: Get Red Notices
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: interpol.get-notices-v1-red
+      with:
+        forename: tools.forename
+        name: tools.name
+        nationality: tools.nationality
+        ageMax: tools.ageMax
+        ageMin: tools.ageMin
+        freeText: tools.freeText
+        sexId: tools.sexId
+        arrestWarrantCountryId: tools.arrestWarrantCountryId
+        page: tools.page
+        resultPerPage: tools.resultPerPage
+      inputParameters:
+      - name: forename
+        type: string
+        description: First name
+      - name: name
+        type: string
+        description: Last name
+      - name: nationality
+        type: string
+        description: Two digit country code
+      - name: ageMax
+        type: integer
+        description: maximum age
+      - name: ageMin
+        type: integer
+        description: minimum age
+      - name: freeText
+        type: string
+        description: Free text query
+      - name: sexId
+        type: string
+        description: Free text query
+      - name: arrestWarrantCountryId
+        type: string
+        description: Two digit country code
+      - name: page
+        type: integer
+        description: pagination - starts with 1
+      - name: resultPerPage
+        type: integer
+        description: resultPerPage
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-notices-v1-red-noticeid
+      description: Get Red Notice Details
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: interpol.get-notices-v1-red-noticeid
+      with:
+        noticeID: tools.noticeID
+      inputParameters:
+      - name: noticeID
+        type: string
+        description: Notice ID
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-notices-v1-red-noticeid-images
+      description: Get Red Notice Images
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: interpol.get-notices-v1-red-noticeid-images
+      with:
+        noticeID: tools.noticeID
+      inputParameters:
+      - name: noticeID
+        type: string
+        description: Notice ID
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-notices-v1-yellow
+      description: Get Yellow Notices
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: interpol.get-notices-v1-yellow
+      with:
+        forename: tools.forename
+        name: tools.name
+        nationality: tools.nationality
+        ageMax: tools.ageMax
+        ageMin: tools.ageMin
+        freeText: tools.freeText
+        sexId: tools.sexId
+        page: tools.page
+        resultPerPage: tools.resultPerPage
+      inputParameters:
+      - name: forename
+        type: string
+        description: First name
+      - name: name
+        type: string
+        description: Last name
+      - name: nationality
+        type: string
+        description: Two digit country code
+      - name: ageMax
+        type: integer
+        description: maximum age
+      - name: ageMin
+        type: integer
+        description: minimum age
+      - name: freeText
+        type: string
+        description: Free text query
+      - name: sexId
+        type: string
+        description: Free text query
+      - name: page
+        type: integer
+        description: pagination - starts with 1
+      - name: resultPerPage
+        type: integer
+        description: resultPerPage
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-notices-v1-yellow-noticeid
+      description: Get Yellow Notice Details
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: interpol.get-notices-v1-yellow-noticeid
+      with:
+        noticeID: tools.noticeID
+      inputParameters:
+      - name: noticeID
+        type: string
+        description: Notice ID
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-notices-v1-yellow-noticeid-images
+      description: Get Yellow Notice Images
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: interpol.get-notices-v1-yellow-noticeid-images
+      with:
+        noticeID: tools.noticeID
+      inputParameters:
+      - name: noticeID
+        type: string
+        description: Notice ID
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-notices-v1-un
+      description: Get UN Notices
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: interpol.get-notices-v1-un
+      with:
+        name: tools.name
+        unReference: tools.unReference
+        unResolution: tools.unResolution
+        page: tools.page
+        resultPerPage: tools.resultPerPage
+      inputParameters:
+      - name: name
+        type: string
+        description: Last name
+      - name: unReference
+        type: string
+        description: UN-Referenz
+      - name: unResolution
+        type: integer
+        description: UN-Resolution
+      - name: page
+        type: integer
+        description: pagination - starts with 1
+      - name: resultPerPage
+        type: integer
+        description: resultPerPage
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-notices-v1-un-noticetype-noticeid
+      description: Get UN Notice Details
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: interpol.get-notices-v1-un-noticetype-noticeid
+      with:
+        noticeID: tools.noticeID
+        noticeType: tools.noticeType
+      inputParameters:
+      - name: noticeID
+        type: string
+        description: Notice ID
+        required: true
+      - name: noticeType
+        type: string
+        description: Notice Type (either 'persons' or 'entities')
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-notices-v1-un-noticetype-noticeid-images
+      description: Get UN Notice Images
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: interpol.get-notices-v1-un-noticetype-noticeid-images
+      with:
+        noticeID: tools.noticeID
+        noticeType: tools.noticeType
+      inputParameters:
+      - name: noticeID
+        type: string
+        description: Notice ID
+        required: true
+      - name: noticeType
+        type: string
+        description: Notice Type (either 'persons' or 'entities')
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
