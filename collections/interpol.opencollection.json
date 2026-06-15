@@ -1,0 +1,319 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Interpol Notices API",
+    "version": "1.0.2"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Get Red Notices",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://ws-public.interpol.int/notices/v1/red",
+        "params": [
+          {
+            "name": "forename",
+            "value": "MAX",
+            "type": "query",
+            "description": "First name"
+          },
+          {
+            "name": "name",
+            "value": "Mustermann",
+            "type": "query",
+            "description": "Last name"
+          },
+          {
+            "name": "nationality",
+            "value": "DE",
+            "type": "query",
+            "description": "Two digit country code"
+          },
+          {
+            "name": "ageMax",
+            "value": "120",
+            "type": "query",
+            "description": "maximum age"
+          },
+          {
+            "name": "ageMin",
+            "value": "18",
+            "type": "query",
+            "description": "minimum age"
+          },
+          {
+            "name": "freeText",
+            "value": "",
+            "type": "query",
+            "description": "Free text query"
+          },
+          {
+            "name": "sexId",
+            "value": "F",
+            "type": "query",
+            "description": "Free text query"
+          },
+          {
+            "name": "arrestWarrantCountryId",
+            "value": "DE",
+            "type": "query",
+            "description": "Two digit country code"
+          },
+          {
+            "name": "page",
+            "value": "1",
+            "type": "query",
+            "description": "pagination - starts with 1"
+          },
+          {
+            "name": "resultPerPage",
+            "value": "200",
+            "type": "query",
+            "description": "resultPerPage"
+          }
+        ]
+      },
+      "docs": "Get Red Notices"
+    },
+    {
+      "info": {
+        "name": "Get Red Notice Details",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://ws-public.interpol.int/notices/v1/red/:noticeID",
+        "params": [
+          {
+            "name": "noticeID",
+            "value": "1993-27493",
+            "type": "path",
+            "description": "Notice ID"
+          }
+        ]
+      },
+      "docs": "Get Red Notice Details"
+    },
+    {
+      "info": {
+        "name": "Get Red Notice Images",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://ws-public.interpol.int/notices/v1/red/:noticeID/images",
+        "params": [
+          {
+            "name": "noticeID",
+            "value": "1993-27493",
+            "type": "path",
+            "description": "Notice ID"
+          }
+        ]
+      },
+      "docs": "Get Red Notice Images"
+    },
+    {
+      "info": {
+        "name": "Get Yellow Notices",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://ws-public.interpol.int/notices/v1/yellow",
+        "params": [
+          {
+            "name": "forename",
+            "value": "MAX",
+            "type": "query",
+            "description": "First name"
+          },
+          {
+            "name": "name",
+            "value": "Mustermann",
+            "type": "query",
+            "description": "Last name"
+          },
+          {
+            "name": "nationality",
+            "value": "DE",
+            "type": "query",
+            "description": "Two digit country code"
+          },
+          {
+            "name": "ageMax",
+            "value": "120",
+            "type": "query",
+            "description": "maximum age"
+          },
+          {
+            "name": "ageMin",
+            "value": "18",
+            "type": "query",
+            "description": "minimum age"
+          },
+          {
+            "name": "freeText",
+            "value": "",
+            "type": "query",
+            "description": "Free text query"
+          },
+          {
+            "name": "sexId",
+            "value": "F",
+            "type": "query",
+            "description": "Free text query"
+          },
+          {
+            "name": "page",
+            "value": "1",
+            "type": "query",
+            "description": "pagination - starts with 1"
+          },
+          {
+            "name": "resultPerPage",
+            "value": "200",
+            "type": "query",
+            "description": "resultPerPage"
+          }
+        ]
+      },
+      "docs": "Get Yellow Notices"
+    },
+    {
+      "info": {
+        "name": "Get Yellow Notice Details",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://ws-public.interpol.int/notices/v1/yellow/:noticeID",
+        "params": [
+          {
+            "name": "noticeID",
+            "value": "2014-5590",
+            "type": "path",
+            "description": "Notice ID"
+          }
+        ]
+      },
+      "docs": "Get Yellow Notice Details"
+    },
+    {
+      "info": {
+        "name": "Get Yellow Notice Images",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://ws-public.interpol.int/notices/v1/yellow/:noticeID/images",
+        "params": [
+          {
+            "name": "noticeID",
+            "value": "2014-5590",
+            "type": "path",
+            "description": "Notice ID"
+          }
+        ]
+      },
+      "docs": "Get Yellow Notice Images"
+    },
+    {
+      "info": {
+        "name": "Get UN Notices",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://ws-public.interpol.int/notices/v1/un",
+        "params": [
+          {
+            "name": "name",
+            "value": "Mustermann",
+            "type": "query",
+            "description": "Last name"
+          },
+          {
+            "name": "unReference",
+            "value": "",
+            "type": "query",
+            "description": "UN-Referenz"
+          },
+          {
+            "name": "unResolution",
+            "value": "1267",
+            "type": "query",
+            "description": "UN-Resolution"
+          },
+          {
+            "name": "page",
+            "value": "1",
+            "type": "query",
+            "description": "pagination - starts with 1"
+          },
+          {
+            "name": "resultPerPage",
+            "value": "200",
+            "type": "query",
+            "description": "resultPerPage"
+          }
+        ]
+      },
+      "docs": "Get UN Notices"
+    },
+    {
+      "info": {
+        "name": "Get UN Notice Details",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://ws-public.interpol.int/notices/v1/un/:noticeType/:noticeID",
+        "params": [
+          {
+            "name": "noticeID",
+            "value": "2014-5590",
+            "type": "path",
+            "description": "Notice ID"
+          },
+          {
+            "name": "noticeType",
+            "value": "persons",
+            "type": "path",
+            "description": "Notice Type (either 'persons' or 'entities')"
+          }
+        ]
+      },
+      "docs": "Get UN Notice Details"
+    },
+    {
+      "info": {
+        "name": "Get UN Notice Images",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://ws-public.interpol.int/notices/v1/un/:noticeType/:noticeID/images",
+        "params": [
+          {
+            "name": "noticeID",
+            "value": "2014-5590",
+            "type": "path",
+            "description": "Notice ID"
+          },
+          {
+            "name": "noticeType",
+            "value": "persons",
+            "type": "path",
+            "description": "Notice Type (either 'persons' or 'entities')"
+          }
+        ]
+      },
+      "docs": "Get UN Notice Images"
+    }
+  ],
+  "bundled": true
+}
