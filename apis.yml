@@ -6,7 +6,7 @@ description: >-
   service that returns Red, Yellow, and UN Notices data. An OpenAPI description of that service is published by the
   bundesAPI community and mirrored in this repository.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Federal Government
   - International
