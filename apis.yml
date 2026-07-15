@@ -35,6 +35,8 @@ apis:
       - type: OpenAPI
         url: https://raw.githubusercontent.com/api-evangelist/interpol/refs/heads/main/openapi/interpol-openapi.yml
 common:
+  - type: AgenticAccess
+    url: agentic-access/interpol-agentic-access.yml
   - type: DomainSecurity
     url: security/interpol-domain-security.yml
   - type: LinkedIn
