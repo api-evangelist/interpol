@@ -1,0 +1,14 @@
+{
+  "provider": "interpol",
+  "sources": [
+    "interpol-notices-api-openapi.yml"
+  ],
+  "outputs": [
+    "interpol-notices-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
