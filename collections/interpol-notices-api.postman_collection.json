@@ -1,0 +1,1063 @@
+{
+  "item": [
+    {
+      "id": "8b07fbfa-459d-4ceb-be09-7ea5b405241f",
+      "name": "Notices",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "60a2c718-2e08-4d2b-a0b9-555b34bb169b",
+          "name": "Get Red Notices",
+          "request": {
+            "name": "Get Red Notices",
+            "description": {},
+            "url": {
+              "path": [
+                "notices",
+                "v1",
+                "red"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "forename",
+                  "value": "<string>",
+                  "description": "First name"
+                },
+                {
+                  "disabled": false,
+                  "key": "name",
+                  "value": "<string>",
+                  "description": "Last name"
+                },
+                {
+                  "disabled": false,
+                  "key": "nationality",
+                  "value": "<string>",
+                  "description": "Two digit country code"
+                },
+                {
+                  "disabled": false,
+                  "key": "ageMax",
+                  "value": "<integer>",
+                  "description": "maximum age"
+                },
+                {
+                  "disabled": false,
+                  "key": "ageMin",
+                  "value": "<integer>",
+                  "description": "minimum age"
+                },
+                {
+                  "disabled": false,
+                  "key": "freeText",
+                  "value": "<string>",
+                  "description": "Free text query"
+                },
+                {
+                  "disabled": false,
+                  "key": "sexId",
+                  "value": "<string>",
+                  "description": "Free text query"
+                },
+                {
+                  "disabled": false,
+                  "key": "arrestWarrantCountryId",
+                  "value": "<string>",
+                  "description": "Two digit country code"
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>",
+                  "description": "pagination - starts with 1"
+                },
+                {
+                  "disabled": false,
+                  "key": "resultPerPage",
+                  "value": "<integer>",
+                  "description": "resultPerPage"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "dc71c7f7-6625-4318-bb75-5f39b151b321",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "notices",
+                    "v1",
+                    "red"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "forename",
+                      "value": "MAX"
+                    },
+                    {
+                      "key": "name",
+                      "value": "Mustermann"
+                    },
+                    {
+                      "key": "nationality",
+                      "value": "DE"
+                    },
+                    {
+                      "key": "ageMax",
+                      "value": "120"
+                    },
+                    {
+                      "key": "ageMin",
+                      "value": "18"
+                    },
+                    {
+                      "key": "freeText",
+                      "value": ""
+                    },
+                    {
+                      "key": "sexId",
+                      "value": "F"
+                    },
+                    {
+                      "key": "arrestWarrantCountryId",
+                      "value": "DE"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "resultPerPage",
+                      "value": "200"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"total\": 0,\n  \"query\": {\n    \"page\": 1,\n    \"resultPerPage\": 160\n  },\n  \"_embedded\": {\n    \"notices\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"_links\": {\n    \"self\": {\n      \"href\": \"https://ws-public.interpol.int/notices/v1/red?nationality=DE&resultPerPage=160&page=1\"\n    },\n    \"first\": {\n      \"href\": \"https://ws-public.interpol.int/notices/v1/red?nationality=DE&resultPerPage=160&page=1\"\n    },\n    \"next\": {\n      \"href\": \"https://ws-public.interpol.int/notices/v1/red?nationality=DE&resultPerPage=160&page=2\"\n    },\n    \"last\": {\n      \"href\": \"https://ws-public.interpol.int/notices/v1/red?nationality=DE&resultPerPage=160&page=8\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6f463af3-b530-4f69-b3ea-a1a8ba04096d",
+          "name": "Get Red Notice Details",
+          "request": {
+            "name": "Get Red Notice Details",
+            "description": {},
+            "url": {
+              "path": [
+                "notices",
+                "v1",
+                "red",
+                ":noticeID"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "noticeID",
+                  "description": "(Required) Notice ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3638015a-d420-48bf-be66-1844f8f77e46",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "notices",
+                    "v1",
+                    "red",
+                    ":noticeID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "noticeID",
+                      "description": "(Required) Notice ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"arrest_warrants\": [\n    {\n      \"issuing_country_id\": \"DE\",\n      \"charge\": \"Attempted murder coinciding with attempted jointly committed aggravated robbery and kidnapping for ransom coinciding with aggravated robbery and aggravated robbery coinciding with attempted aggravated extortionate assault especially aggravated robbery aggravated robbery in penal cumulation with attempted arson and aggravated robbery\",\n      \"charge_translation\": \"string\"\n    },\n    {\n      \"issuing_country_id\": \"DE\",\n      \"charge\": \"Attempted murder coinciding with attempted jointly committed aggravated robbery and kidnapping for ransom coinciding with aggravated robbery and aggravated robbery coinciding with attempted aggravated extortionate assault especially aggravated robbery aggravated robbery in penal cumulation with attempted arson and aggravated robbery\",\n      \"charge_translation\": \"string\"\n    }\n  ],\n  \"weight\": 63,\n  \"forename\": \"DANIELA MARIE LUISE\",\n  \"date_of_birth\": \"1958/11/05\",\n  \"entity_id\": \"1993/27493\",\n  \"languages_spoken_ids\": [\n    \"GER\",\n    \"GER\"\n  ],\n  \"nationalities\": [\n    \"DE\",\n    \"DE\"\n  ],\n  \"height\": 1.65,\n  \"sex_id\": \"F\",\n  \"country_of_birth_id\": \"DE\",\n  \"name\": \"KLETTE\",\n  \"distinguishing_marks\": \"Birthmarks in the face\",\n  \"eyes_colors_id\": [\n    \"BRO\",\n    \"BRO\"\n  ],\n  \"hairs_id\": [\n    \"BLA\",\n    \"BLA\"\n  ],\n  \"place_of_birth\": \"KARLSRUHE\",\n  \"_embedded\": {\n    \"links\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"_links\": {\n    \"self\": {\n      \"href\": \"https://ws-public.interpol.int/notices/v1/red/1993-27493\"\n    },\n    \"images\": {\n      \"href\": \"https://ws-public.interpol.int/notices/v1/red/1993-27493/images\"\n    },\n    \"thumbnail\": {\n      \"href\": \"https://ws-public.interpol.int/notices/v1/red/1993-27493/images/59558401\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e3ca813e-5f18-42e4-9081-a11364e9c2a4",
+          "name": "Get Red Notice Images",
+          "request": {
+            "name": "Get Red Notice Images",
+            "description": {},
+            "url": {
+              "path": [
+                "notices",
+                "v1",
+                "red",
+                ":noticeID",
+                "images"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "noticeID",
+                  "description": "(Required) Notice ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e3f62531-907b-4895-9cb5-30f7de294898",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "notices",
+                    "v1",
+                    "red",
+                    ":noticeID",
+                    "images"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "noticeID",
+                      "description": "(Required) Notice ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"_embedded\": {\n    \"images\": [\n      {\n        \"picture_id\": \"52558228\",\n        \"_links\": {\n          \"self\": {\n            \"href\": \"https://ws-public.interpol.int/notices/v1/red/1993-27493/images/52558228\"\n          }\n        }\n      },\n      {\n        \"picture_id\": \"52558228\",\n        \"_links\": {\n          \"self\": {\n            \"href\": \"https://ws-public.interpol.int/notices/v1/red/1993-27493/images/52558228\"\n          }\n        }\n      }\n    ]\n  },\n  \"_links\": {\n    \"self\": {\n      \"href\": \"https://ws-public.interpol.int/notices/v1/red/1993-27493/images\"\n    },\n    \"notice\": {\n      \"href\": \"https://ws-public.interpol.int/notices/v1/red/1993-27493\"\n    },\n    \"thumbnail\": {\n      \"href\": \"https://ws-public.interpol.int/notices/v1/red/1993-27493/images/59558401\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c8775d24-5822-4538-9c73-3fbea89fa0f2",
+          "name": "Get Yellow Notices",
+          "request": {
+            "name": "Get Yellow Notices",
+            "description": {},
+            "url": {
+              "path": [
+                "notices",
+                "v1",
+                "yellow"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "forename",
+                  "value": "<string>",
+                  "description": "First name"
+                },
+                {
+                  "disabled": false,
+                  "key": "name",
+                  "value": "<string>",
+                  "description": "Last name"
+                },
+                {
+                  "disabled": false,
+                  "key": "nationality",
+                  "value": "<string>",
+                  "description": "Two digit country code"
+                },
+                {
+                  "disabled": false,
+                  "key": "ageMax",
+                  "value": "<integer>",
+                  "description": "maximum age"
+                },
+                {
+                  "disabled": false,
+                  "key": "ageMin",
+                  "value": "<integer>",
+                  "description": "minimum age"
+                },
+                {
+                  "disabled": false,
+                  "key": "freeText",
+                  "value": "<string>",
+                  "description": "Free text query"
+                },
+                {
+                  "disabled": false,
+                  "key": "sexId",
+                  "value": "<string>",
+                  "description": "Free text query"
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>",
+                  "description": "pagination - starts with 1"
+                },
+                {
+                  "disabled": false,
+                  "key": "resultPerPage",
+                  "value": "<integer>",
+                  "description": "resultPerPage"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c722b344-f894-42f3-be66-8bc03ebc50c6",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "notices",
+                    "v1",
+                    "yellow"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "forename",
+                      "value": "MAX"
+                    },
+                    {
+                      "key": "name",
+                      "value": "Mustermann"
+                    },
+                    {
+                      "key": "nationality",
+                      "value": "DE"
+                    },
+                    {
+                      "key": "ageMax",
+                      "value": "120"
+                    },
+                    {
+                      "key": "ageMin",
+                      "value": "18"
+                    },
+                    {
+                      "key": "freeText",
+                      "value": ""
+                    },
+                    {
+                      "key": "sexId",
+                      "value": "F"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "resultPerPage",
+                      "value": "200"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"total\": 0,\n  \"query\": {\n    \"page\": 1,\n    \"resultPerPage\": 160\n  },\n  \"_embedded\": {\n    \"notices\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"_links\": {\n    \"self\": {\n      \"href\": \"https://ws-public.interpol.int/notices/v1/yellow?nationality=DE&resultPerPage=160&page=1\"\n    },\n    \"first\": {\n      \"href\": \"https://ws-public.interpol.int/notices/v1/yellow?nationality=DE&resultPerPage=160&page=1\"\n    },\n    \"next\": {\n      \"href\": \"https://ws-public.interpol.int/notices/v1/yellow?nationality=DE&resultPerPage=160&page=2\"\n    },\n    \"last\": {\n      \"href\": \"https://ws-public.interpol.int/notices/v1/yellow?nationality=DE&resultPerPage=160&page=8\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a6810ead-94e2-47b4-b348-697f260df182",
+          "name": "Get Yellow Notice Details",
+          "request": {
+            "name": "Get Yellow Notice Details",
+            "description": {},
+            "url": {
+              "path": [
+                "notices",
+                "v1",
+                "yellow",
+                ":noticeID"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "noticeID",
+                  "description": "(Required) Notice ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f9cf31b9-3744-429d-ac01-bdb28a314606",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "notices",
+                    "v1",
+                    "yellow",
+                    ":noticeID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "noticeID",
+                      "description": "(Required) Notice ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"weight\": 63,\n  \"birth_name\": \"string\",\n  \"entity_id\": \"2022/9888\",\n  \"nationalities\": [\n    \"DE\",\n    \"DE\"\n  ],\n  \"height\": 1.65,\n  \"name\": \"MAX\",\n  \"eyes_colors_id\": [\n    \"BRO\",\n    \"BRO\"\n  ],\n  \"place\": \"KARLSRUHE\",\n  \"date_of_event\": \"2021/02/01\",\n  \"hairs_id\": [\n    \"BLA\",\n    \"BLA\"\n  ],\n  \"father_forename\": \"MAX\",\n  \"mother_forename\": \"PAULA\",\n  \"forename\": \"MAX\",\n  \"date_of_birth\": \"1958/11/05\",\n  \"languages_spoken_ids\": [\n    \"GER\",\n    \"GER\"\n  ],\n  \"country\": \"DE\",\n  \"country_of_birth_id\": \"DE\",\n  \"sex_id\": \"F\",\n  \"distinguishing_marks\": \"Birthmarks in the face\",\n  \"mother_name\": \"MUSTERMANN\",\n  \"place_of_birth\": \"KARLSRUHE\",\n  \"_embedded\": {\n    \"links\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"_links\": {\n    \"self\": {\n      \"href\": \"https://ws-public.interpol.int/notices/v1/yellow/2022-9888\"\n    },\n    \"images\": {\n      \"href\": \"https://ws-public.interpol.int/notices/v1/yellow/2022-9888/images\"\n    },\n    \"thumbnail\": {\n      \"href\": \"https://ws-public.interpol.int/notices/v1/yellow/2022-9888/images/59558401\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2b719952-17db-4966-b753-a9ca29563bae",
+          "name": "Get Yellow Notice Images",
+          "request": {
+            "name": "Get Yellow Notice Images",
+            "description": {},
+            "url": {
+              "path": [
+                "notices",
+                "v1",
+                "yellow",
+                ":noticeID",
+                "images"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "noticeID",
+                  "description": "(Required) Notice ID"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6414b73c-00bc-48ed-9911-c776b4a899a4",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "notices",
+                    "v1",
+                    "yellow",
+                    ":noticeID",
+                    "images"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "noticeID",
+                      "description": "(Required) Notice ID"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"_embedded\": {\n    \"images\": [\n      {\n        \"picture_id\": \"59410257\",\n        \"_links\": {\n          \"self\": {\n            \"href\": \"https://ws-public.interpol.int/notices/v1/yellow/2014-5590/images/59410257\"\n          }\n        }\n      },\n      {\n        \"picture_id\": \"59410257\",\n        \"_links\": {\n          \"self\": {\n            \"href\": \"https://ws-public.interpol.int/notices/v1/yellow/2014-5590/images/59410257\"\n          }\n        }\n      }\n    ]\n  },\n  \"_links\": {\n    \"self\": {\n      \"href\": \"https://ws-public.interpol.int/notices/v1/yellow/2014-5590/images\"\n    },\n    \"notice\": {\n      \"href\": \"https://ws-public.interpol.int/notices/v1/yellow/2014-5590\"\n    },\n    \"thumbnail\": {\n      \"href\": \"https://ws-public.interpol.int/notices/v1/yellow/2014-5590/images/59410257\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "81bb4c3c-8db9-4fe1-a431-aebbb21d864f",
+          "name": "Get UN Notices",
+          "request": {
+            "name": "Get UN Notices",
+            "description": {},
+            "url": {
+              "path": [
+                "notices",
+                "v1",
+                "un"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "name",
+                  "value": "<string>",
+                  "description": "Last name"
+                },
+                {
+                  "disabled": false,
+                  "key": "unReference",
+                  "value": "<string>",
+                  "description": "UN-Referenz"
+                },
+                {
+                  "disabled": false,
+                  "key": "unResolution",
+                  "value": "<integer>",
+                  "description": "UN-Resolution"
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<integer>",
+                  "description": "pagination - starts with 1"
+                },
+                {
+                  "disabled": false,
+                  "key": "resultPerPage",
+                  "value": "<integer>",
+                  "description": "resultPerPage"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "af7cfd09-f2af-448d-930c-b607b2dc0f3d",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "notices",
+                    "v1",
+                    "un"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "name",
+                      "value": "Mustermann"
+                    },
+                    {
+                      "key": "unReference",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "unResolution",
+                      "value": "1267"
+                    },
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "resultPerPage",
+                      "value": "200"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"total\": 0,\n  \"query\": {\n    \"page\": 1,\n    \"resultPerPage\": 160\n  },\n  \"_embedded\": {\n    \"notices\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"_links\": {\n    \"self\": {\n      \"href\": \"https://ws-public.interpol.int/notices/v1/un?nationality=DE&resultPerPage=160&page=1\"\n    },\n    \"first\": {\n      \"href\": \"https://ws-public.interpol.int/notices/v1/un?nationality=DE&resultPerPage=160&page=1\"\n    },\n    \"next\": {\n      \"href\": \"https://ws-public.interpol.int/notices/v1/un?nationality=DE&resultPerPage=160&page=2\"\n    },\n    \"last\": {\n      \"href\": \"https://ws-public.interpol.int/notices/v1/un?nationality=DE&resultPerPage=160&page=8\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "03afb7ae-9928-4863-af18-fe500ae16e8d",
+          "name": "Get UN Notice Details",
+          "request": {
+            "name": "Get UN Notice Details",
+            "description": {},
+            "url": {
+              "path": [
+                "notices",
+                "v1",
+                "un",
+                ":noticeType",
+                ":noticeID"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "noticeID",
+                  "description": "(Required) Notice ID"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "noticeType",
+                  "description": "(Required) Notice Type (either 'persons' or 'entities')"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6532de9e-546d-457a-9441-1d5759b79d49",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "notices",
+                    "v1",
+                    "un",
+                    ":noticeType",
+                    ":noticeID"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "noticeID",
+                      "description": "(Required) Notice ID"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "noticeType",
+                      "description": "(Required) Notice Type (either 'persons' or 'entities')"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"weight\": 63,\n  \"birth_name\": \"string\",\n  \"entity_id\": \"2022/9888\",\n  \"nationalities\": [\n    \"DE\",\n    \"DE\"\n  ],\n  \"height\": 1.65,\n  \"name\": \"MAX\",\n  \"eyes_colors_id\": [\n    \"BRO\",\n    \"BRO\"\n  ],\n  \"place\": \"KARLSRUHE\",\n  \"date_of_event\": \"2021/02/01\",\n  \"hairs_id\": [\n    \"BLA\",\n    \"BLA\"\n  ],\n  \"father_forename\": \"MAX\",\n  \"mother_forename\": \"PAULA\",\n  \"forename\": \"MAX\",\n  \"date_of_birth\": \"1958/11/05\",\n  \"languages_spoken_ids\": [\n    \"GER\",\n    \"GER\"\n  ],\n  \"country\": \"DE\",\n  \"country_of_birth_id\": \"DE\",\n  \"sex_id\": \"F\",\n  \"distinguishing_marks\": \"Birthmarks in the face\",\n  \"mother_name\": \"MUSTERMANN\",\n  \"place_of_birth\": \"KARLSRUHE\",\n  \"_embedded\": {\n    \"links\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  \"_links\": {\n    \"self\": {\n      \"href\": \"https://ws-public.interpol.int/notices/v1/yellow/2022-9888\"\n    },\n    \"images\": {\n      \"href\": \"https://ws-public.interpol.int/notices/v1/yellow/2022-9888/images\"\n    },\n    \"thumbnail\": {\n      \"href\": \"https://ws-public.interpol.int/notices/v1/yellow/2022-9888/images/59558401\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1ee105e8-1f9e-4645-b591-3441bc9521ec",
+          "name": "Get UN Notice Images",
+          "request": {
+            "name": "Get UN Notice Images",
+            "description": {},
+            "url": {
+              "path": [
+                "notices",
+                "v1",
+                "un",
+                ":noticeType",
+                ":noticeID",
+                "images"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "noticeID",
+                  "description": "(Required) Notice ID"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "noticeType",
+                  "description": "(Required) Notice Type (either 'persons' or 'entities')"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "185d4c0e-d19f-4845-a74d-c92495e938fe",
+              "name": "OK",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "notices",
+                    "v1",
+                    "un",
+                    ":noticeType",
+                    ":noticeID",
+                    "images"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "noticeID",
+                      "description": "(Required) Notice ID"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "noticeType",
+                      "description": "(Required) Notice Type (either 'persons' or 'entities')"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"_embedded\": {\n    \"images\": [\n      {\n        \"picture_id\": \"62323740\",\n        \"_links\": {\n          \"self\": {\n            \"href\": \"https://ws-public.interpol.int/notices/v1/un/2021-82522/images/62323740\"\n          }\n        }\n      },\n      {\n        \"picture_id\": \"62323740\",\n        \"_links\": {\n          \"self\": {\n            \"href\": \"https://ws-public.interpol.int/notices/v1/un/2021-82522/images/62323740\"\n          }\n        }\n      }\n    ]\n  },\n  \"_links\": {\n    \"self\": {\n      \"href\": \"https://ws-public.interpol.int/notices/v1/un/persons/2021-82522/images\"\n    },\n    \"notice\": {\n      \"href\": \"https://ws-public.interpol.int/notices/v1/un/persons/2021-82522\"\n    },\n    \"thumbnail\": {\n      \"href\": \"https://ws-public.interpol.int/notices/v1/un/persons/2021-82522/images/62323740\"\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://ws-public.interpol.int",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "fdadea18-70d3-4862-87db-c2447b737eaa",
+    "name": "Interpol Notices API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Interpol Red, Yellow and UN Notices API",
+      "type": "text/plain"
+    }
+  }
+}
