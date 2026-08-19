@@ -28,7 +28,7 @@ tags:
 url: https://raw.githubusercontent.com/api-evangelist/interpol/refs/heads/main/apis.yml
 created: '2024-12-03'
 modified: '2026-05-19'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: interpol:interpol-notices-api
   name: Interpol Notices API
