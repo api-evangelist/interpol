@@ -1,0 +1,27 @@
+slug: interpol
+provider: Interpol
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Public Sector & Government
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: Notices
+  spec_file: interpol-notices-api-openapi.yml
+  capability_id: BC-3310.60
+  capability_id_l1: BC-3310
+  capability_name: Public Safety Investigations
+  confidence: 0.7
+  evidence: '''Interpol Red, Yellow and UN Notices API''; GET /notices/v1/red ''Get Red Notices'', GET
+    /notices/v1/yellow ''Get Yellow Notices''; schemas RedNoticeDetail, YellowNotices'
+  reason: Red notices are international wanted-person alerts and yellow notices are missing-person alerts,
+    i.e. law-enforcement intelligence and case information shared for criminal investigation purposes.
+    Public Safety Investigations (evidence, intelligence, case preparation) is the best fit; 0.7 because
+    the surface is read-only publication of notices rather than investigation case management itself.

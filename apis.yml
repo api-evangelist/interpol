@@ -60,6 +60,9 @@ apis:
   - type: Documentation
     url: https://interpol.api.bund.dev
 common:
+  - type: CapabilityMap
+    url: capabilities/interpol-capability-edges.yml
+    name: Interpol Business Capability Map
   - type: AgenticAccess
     url: agentic-access/interpol-agentic-access.yml
   - type: DomainSecurity
