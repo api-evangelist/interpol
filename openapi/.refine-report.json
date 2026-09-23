@@ -1,7 +1,7 @@
 {
   "provider": "interpol",
   "sources": [
-    "interpol-notices-api-openapi.yml"
+    "_original/interpol-openapi.yml"
   ],
   "outputs": [
     "interpol-notices-api-openapi.yml"
@@ -9,6 +9,22 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "interpol-openapi.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "interpol-openapi.yml: tagged paths GET /notices/v1/red -> Notices",
+    "interpol-openapi.yml: tagged paths GET /notices/v1/red/{noticeID} -> Notices",
+    "interpol-openapi.yml: tagged paths GET /notices/v1/red/{noticeID}/images -> Notices",
+    "interpol-openapi.yml: tagged paths GET /notices/v1/yellow -> Notices",
+    "interpol-openapi.yml: tagged paths GET /notices/v1/yellow/{noticeID} -> Notices",
+    "interpol-openapi.yml: tagged paths GET /notices/v1/yellow/{noticeID}/images -> Notices",
+    "interpol-openapi.yml: tagged paths GET /notices/v1/un -> Notices",
+    "interpol-openapi.yml: tagged paths GET /notices/v1/un/{noticeType}/{noticeID} -> Notices",
+    "interpol-openapi.yml: tagged paths GET /notices/v1/un/{noticeType}/{noticeID}/images -> Notices",
+    "interpol-openapi.yml: declared missing tag: Notices",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "interpol-notices-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

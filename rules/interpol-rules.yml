@@ -1,13 +1,13 @@
-aid: interpol
-name: Interpol Rules
+x-aid: interpol
+x-name: Interpol Rules
 description: >-
   Validation, governance, and operational rules applied to the INTERPOL
   APIs.json index and the mirrored Notices OpenAPI artifact.
-type: company
-profile:
+x-type: company
+x-profile:
   - apis.json
   - openapi
-governance:
+x-governance:
   source: api-evangelist
   steward: Kin Lane
   visibility: public
