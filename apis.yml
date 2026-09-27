@@ -31,7 +31,7 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/interpol.png
 tags:
-  - Federal-Government
+  - Federal Government
   - International
   - Law Enforcement
   - Notices
@@ -42,6 +42,7 @@ tags_raw:
   - Law Enforcement
   - Notices
   - Police
+  - Federal-Government
 url: https://raw.githubusercontent.com/api-evangelist/interpol/refs/heads/main/apis.yml
 created: '2024-12-03'
 modified: '2026-05-19'
