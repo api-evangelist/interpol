@@ -378,6 +378,390 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    YellowNotices:
+      type: object
+      properties:
+        total:
+          type: integer
+          format: int32
+          example: 0
+        query:
+          type: object
+          properties:
+            page:
+              type: integer
+              format: int32
+              example: 1
+            resultPerPage:
+              type: integer
+              format: int32
+              example: 160
+        _embedded:
+          type: object
+          properties:
+            notices:
+              type: array
+              items:
+                type: string
+        _links:
+          type: object
+          properties:
+            self:
+              type: object
+              properties:
+                href:
+                  type: string
+                  example: https://ws-public.interpol.int/notices/v1/yellow?nationality=DE&resultPerPage=160&page=1
+            first:
+              type: object
+              properties:
+                href:
+                  type: string
+                  example: https://ws-public.interpol.int/notices/v1/yellow?nationality=DE&resultPerPage=160&page=1
+            next:
+              type: object
+              properties:
+                href:
+                  type: string
+                  example: https://ws-public.interpol.int/notices/v1/yellow?nationality=DE&resultPerPage=160&page=2
+            last:
+              type: object
+              properties:
+                href:
+                  type: string
+                  example: https://ws-public.interpol.int/notices/v1/yellow?nationality=DE&resultPerPage=160&page=8
+    UNNoticeDetailImages:
+      type: object
+      properties:
+        _embedded:
+          type: object
+          properties:
+            images:
+              type: array
+              items:
+                type: object
+                properties:
+                  picture_id:
+                    type: string
+                    example: '62323740'
+                  _links:
+                    type: object
+                    properties:
+                      self:
+                        type: object
+                        properties:
+                          href:
+                            type: string
+                            example: https://ws-public.interpol.int/notices/v1/un/2021-82522/images/62323740
+        _links:
+          type: object
+          properties:
+            self:
+              type: object
+              properties:
+                href:
+                  type: string
+                  example: https://ws-public.interpol.int/notices/v1/un/persons/2021-82522/images
+            notice:
+              type: object
+              properties:
+                href:
+                  type: string
+                  example: https://ws-public.interpol.int/notices/v1/un/persons/2021-82522
+            thumbnail:
+              type: object
+              properties:
+                href:
+                  type: string
+                  example: https://ws-public.interpol.int/notices/v1/un/persons/2021-82522/images/62323740
+    RedNoticeDetailImages:
+      type: object
+      properties:
+        _embedded:
+          type: object
+          properties:
+            images:
+              type: array
+              items:
+                type: object
+                properties:
+                  picture_id:
+                    type: string
+                    example: '52558228'
+                  _links:
+                    type: object
+                    properties:
+                      self:
+                        type: object
+                        properties:
+                          href:
+                            type: string
+                            example: https://ws-public.interpol.int/notices/v1/red/1993-27493/images/52558228
+        _links:
+          type: object
+          properties:
+            self:
+              type: object
+              properties:
+                href:
+                  type: string
+                  example: https://ws-public.interpol.int/notices/v1/red/1993-27493/images
+            notice:
+              type: object
+              properties:
+                href:
+                  type: string
+                  example: https://ws-public.interpol.int/notices/v1/red/1993-27493
+            thumbnail:
+              type: object
+              properties:
+                href:
+                  type: string
+                  example: https://ws-public.interpol.int/notices/v1/red/1993-27493/images/59558401
+    RedNotices:
+      type: object
+      properties:
+        total:
+          type: integer
+          format: int32
+          example: 0
+        query:
+          type: object
+          properties:
+            page:
+              type: integer
+              format: int32
+              example: 1
+            resultPerPage:
+              type: integer
+              format: int32
+              example: 160
+        _embedded:
+          type: object
+          properties:
+            notices:
+              type: array
+              items:
+                type: string
+        _links:
+          type: object
+          properties:
+            self:
+              type: object
+              properties:
+                href:
+                  type: string
+                  example: https://ws-public.interpol.int/notices/v1/red?nationality=DE&resultPerPage=160&page=1
+            first:
+              type: object
+              properties:
+                href:
+                  type: string
+                  example: https://ws-public.interpol.int/notices/v1/red?nationality=DE&resultPerPage=160&page=1
+            next:
+              type: object
+              properties:
+                href:
+                  type: string
+                  example: https://ws-public.interpol.int/notices/v1/red?nationality=DE&resultPerPage=160&page=2
+            last:
+              type: object
+              properties:
+                href:
+                  type: string
+                  example: https://ws-public.interpol.int/notices/v1/red?nationality=DE&resultPerPage=160&page=8
+    YellowNoticeDetailImages:
+      type: object
+      properties:
+        _embedded:
+          type: object
+          properties:
+            images:
+              type: array
+              items:
+                type: object
+                properties:
+                  picture_id:
+                    type: string
+                    example: '59410257'
+                  _links:
+                    type: object
+                    properties:
+                      self:
+                        type: object
+                        properties:
+                          href:
+                            type: string
+                            example: https://ws-public.interpol.int/notices/v1/yellow/2014-5590/images/59410257
+        _links:
+          type: object
+          properties:
+            self:
+              type: object
+              properties:
+                href:
+                  type: string
+                  example: https://ws-public.interpol.int/notices/v1/yellow/2014-5590/images
+            notice:
+              type: object
+              properties:
+                href:
+                  type: string
+                  example: https://ws-public.interpol.int/notices/v1/yellow/2014-5590
+            thumbnail:
+              type: object
+              properties:
+                href:
+                  type: string
+                  example: https://ws-public.interpol.int/notices/v1/yellow/2014-5590/images/59410257
+    RedNoticeDetail:
+      type: object
+      properties:
+        arrest_warrants:
+          type: array
+          items:
+            type: object
+            properties:
+              issuing_country_id:
+                type: string
+                example: DE
+              charge:
+                type: string
+                example: Attempted murder coinciding with attempted jointly committed aggravated robbery and kidnapping for ransom coinciding with aggravated robbery and aggravated robbery coinciding with attempted aggravated extortionate assault especially aggravated robbery aggravated robbery in penal cumulation with attempted arson and aggravated robbery
+              charge_translation:
+                type: string
+                format: nullable
+        weight:
+          type: integer
+          format: int32
+          example: 63
+        forename:
+          type: string
+          example: DANIELA MARIE LUISE
+        date_of_birth:
+          type: string
+          example: 1958/11/05
+        entity_id:
+          type: string
+          example: 1993/27493
+        languages_spoken_ids:
+          type: array
+          items:
+            type: string
+            example: GER
+        nationalities:
+          type: array
+          items:
+            type: string
+            example: DE
+        height:
+          type: number
+          example: 1.65
+        sex_id:
+          type: string
+          example: F
+        country_of_birth_id:
+          type: string
+          example: DE
+        name:
+          type: string
+          example: KLETTE
+        distinguishing_marks:
+          type: string
+          example: Birthmarks in the face
+        eyes_colors_id:
+          type: array
+          items:
+            type: string
+            example: BRO
+        hairs_id:
+          type: array
+          items:
+            type: string
+            example: BLA
+        place_of_birth:
+          type: string
+          example: KARLSRUHE
+        _embedded:
+          type: object
+          properties:
+            links:
+              type: array
+              items:
+                type: string
+        _links:
+          type: object
+          properties:
+            self:
+              type: object
+              properties:
+                href:
+                  type: string
+                  example: https://ws-public.interpol.int/notices/v1/red/1993-27493
+            images:
+              type: object
+              properties:
+                href:
+                  type: string
+                  example: https://ws-public.interpol.int/notices/v1/red/1993-27493/images
+            thumbnail:
+              type: object
+              properties:
+                href:
+                  type: string
+                  example: https://ws-public.interpol.int/notices/v1/red/1993-27493/images/59558401
+    UNNotices:
+      type: object
+      properties:
+        total:
+          type: integer
+          format: int32
+          example: 0
+        query:
+          type: object
+          properties:
+            page:
+              type: integer
+              format: int32
+              example: 1
+            resultPerPage:
+              type: integer
+              format: int32
+              example: 160
+        _embedded:
+          type: object
+          properties:
+            notices:
+              type: array
+              items:
+                type: string
+        _links:
+          type: object
+          properties:
+            self:
+              type: object
+              properties:
+                href:
+                  type: string
+                  example: https://ws-public.interpol.int/notices/v1/un?nationality=DE&resultPerPage=160&page=1
+            first:
+              type: object
+              properties:
+                href:
+                  type: string
+                  example: https://ws-public.interpol.int/notices/v1/un?nationality=DE&resultPerPage=160&page=1
+            next:
+              type: object
+              properties:
+                href:
+                  type: string
+                  example: https://ws-public.interpol.int/notices/v1/un?nationality=DE&resultPerPage=160&page=2
+            last:
+              type: object
+              properties:
+                href:
+                  type: string
+                  example: https://ws-public.interpol.int/notices/v1/un?nationality=DE&resultPerPage=160&page=8
     YellowNoticeDetail:
       type: object
       properties:
@@ -480,387 +864,3 @@ components:
                 href:
                   type: string
                   example: https://ws-public.interpol.int/notices/v1/yellow/2022-9888/images/59558401
-    UNNoticeDetailImages:
-      type: object
-      properties:
-        _embedded:
-          type: object
-          properties:
-            images:
-              type: array
-              items:
-                type: object
-                properties:
-                  picture_id:
-                    type: string
-                    example: '62323740'
-                  _links:
-                    type: object
-                    properties:
-                      self:
-                        type: object
-                        properties:
-                          href:
-                            type: string
-                            example: https://ws-public.interpol.int/notices/v1/un/2021-82522/images/62323740
-        _links:
-          type: object
-          properties:
-            self:
-              type: object
-              properties:
-                href:
-                  type: string
-                  example: https://ws-public.interpol.int/notices/v1/un/persons/2021-82522/images
-            notice:
-              type: object
-              properties:
-                href:
-                  type: string
-                  example: https://ws-public.interpol.int/notices/v1/un/persons/2021-82522
-            thumbnail:
-              type: object
-              properties:
-                href:
-                  type: string
-                  example: https://ws-public.interpol.int/notices/v1/un/persons/2021-82522/images/62323740
-    YellowNotices:
-      type: object
-      properties:
-        total:
-          type: integer
-          format: int32
-          example: 0
-        query:
-          type: object
-          properties:
-            page:
-              type: integer
-              format: int32
-              example: 1
-            resultPerPage:
-              type: integer
-              format: int32
-              example: 160
-        _embedded:
-          type: object
-          properties:
-            notices:
-              type: array
-              items:
-                type: string
-        _links:
-          type: object
-          properties:
-            self:
-              type: object
-              properties:
-                href:
-                  type: string
-                  example: https://ws-public.interpol.int/notices/v1/yellow?nationality=DE&resultPerPage=160&page=1
-            first:
-              type: object
-              properties:
-                href:
-                  type: string
-                  example: https://ws-public.interpol.int/notices/v1/yellow?nationality=DE&resultPerPage=160&page=1
-            next:
-              type: object
-              properties:
-                href:
-                  type: string
-                  example: https://ws-public.interpol.int/notices/v1/yellow?nationality=DE&resultPerPage=160&page=2
-            last:
-              type: object
-              properties:
-                href:
-                  type: string
-                  example: https://ws-public.interpol.int/notices/v1/yellow?nationality=DE&resultPerPage=160&page=8
-    UNNotices:
-      type: object
-      properties:
-        total:
-          type: integer
-          format: int32
-          example: 0
-        query:
-          type: object
-          properties:
-            page:
-              type: integer
-              format: int32
-              example: 1
-            resultPerPage:
-              type: integer
-              format: int32
-              example: 160
-        _embedded:
-          type: object
-          properties:
-            notices:
-              type: array
-              items:
-                type: string
-        _links:
-          type: object
-          properties:
-            self:
-              type: object
-              properties:
-                href:
-                  type: string
-                  example: https://ws-public.interpol.int/notices/v1/un?nationality=DE&resultPerPage=160&page=1
-            first:
-              type: object
-              properties:
-                href:
-                  type: string
-                  example: https://ws-public.interpol.int/notices/v1/un?nationality=DE&resultPerPage=160&page=1
-            next:
-              type: object
-              properties:
-                href:
-                  type: string
-                  example: https://ws-public.interpol.int/notices/v1/un?nationality=DE&resultPerPage=160&page=2
-            last:
-              type: object
-              properties:
-                href:
-                  type: string
-                  example: https://ws-public.interpol.int/notices/v1/un?nationality=DE&resultPerPage=160&page=8
-    YellowNoticeDetailImages:
-      type: object
-      properties:
-        _embedded:
-          type: object
-          properties:
-            images:
-              type: array
-              items:
-                type: object
-                properties:
-                  picture_id:
-                    type: string
-                    example: '59410257'
-                  _links:
-                    type: object
-                    properties:
-                      self:
-                        type: object
-                        properties:
-                          href:
-                            type: string
-                            example: https://ws-public.interpol.int/notices/v1/yellow/2014-5590/images/59410257
-        _links:
-          type: object
-          properties:
-            self:
-              type: object
-              properties:
-                href:
-                  type: string
-                  example: https://ws-public.interpol.int/notices/v1/yellow/2014-5590/images
-            notice:
-              type: object
-              properties:
-                href:
-                  type: string
-                  example: https://ws-public.interpol.int/notices/v1/yellow/2014-5590
-            thumbnail:
-              type: object
-              properties:
-                href:
-                  type: string
-                  example: https://ws-public.interpol.int/notices/v1/yellow/2014-5590/images/59410257
-    RedNoticeDetailImages:
-      type: object
-      properties:
-        _embedded:
-          type: object
-          properties:
-            images:
-              type: array
-              items:
-                type: object
-                properties:
-                  picture_id:
-                    type: string
-                    example: '52558228'
-                  _links:
-                    type: object
-                    properties:
-                      self:
-                        type: object
-                        properties:
-                          href:
-                            type: string
-                            example: https://ws-public.interpol.int/notices/v1/red/1993-27493/images/52558228
-        _links:
-          type: object
-          properties:
-            self:
-              type: object
-              properties:
-                href:
-                  type: string
-                  example: https://ws-public.interpol.int/notices/v1/red/1993-27493/images
-            notice:
-              type: object
-              properties:
-                href:
-                  type: string
-                  example: https://ws-public.interpol.int/notices/v1/red/1993-27493
-            thumbnail:
-              type: object
-              properties:
-                href:
-                  type: string
-                  example: https://ws-public.interpol.int/notices/v1/red/1993-27493/images/59558401
-    RedNotices:
-      type: object
-      properties:
-        total:
-          type: integer
-          format: int32
-          example: 0
-        query:
-          type: object
-          properties:
-            page:
-              type: integer
-              format: int32
-              example: 1
-            resultPerPage:
-              type: integer
-              format: int32
-              example: 160
-        _embedded:
-          type: object
-          properties:
-            notices:
-              type: array
-              items:
-                type: string
-        _links:
-          type: object
-          properties:
-            self:
-              type: object
-              properties:
-                href:
-                  type: string
-                  example: https://ws-public.interpol.int/notices/v1/red?nationality=DE&resultPerPage=160&page=1
-            first:
-              type: object
-              properties:
-                href:
-                  type: string
-                  example: https://ws-public.interpol.int/notices/v1/red?nationality=DE&resultPerPage=160&page=1
-            next:
-              type: object
-              properties:
-                href:
-                  type: string
-                  example: https://ws-public.interpol.int/notices/v1/red?nationality=DE&resultPerPage=160&page=2
-            last:
-              type: object
-              properties:
-                href:
-                  type: string
-                  example: https://ws-public.interpol.int/notices/v1/red?nationality=DE&resultPerPage=160&page=8
-    RedNoticeDetail:
-      type: object
-      properties:
-        arrest_warrants:
-          type: array
-          items:
-            type: object
-            properties:
-              issuing_country_id:
-                type: string
-                example: DE
-              charge:
-                type: string
-                example: Attempted murder coinciding with attempted jointly committed aggravated robbery and kidnapping for ransom coinciding with aggravated robbery and aggravated robbery coinciding with attempted aggravated extortionate assault especially aggravated robbery aggravated robbery in penal cumulation with attempted arson and aggravated robbery
-              charge_translation:
-                type: string
-                format: nullable
-        weight:
-          type: integer
-          format: int32
-          example: 63
-        forename:
-          type: string
-          example: DANIELA MARIE LUISE
-        date_of_birth:
-          type: string
-          example: 1958/11/05
-        entity_id:
-          type: string
-          example: 1993/27493
-        languages_spoken_ids:
-          type: array
-          items:
-            type: string
-            example: GER
-        nationalities:
-          type: array
-          items:
-            type: string
-            example: DE
-        height:
-          type: number
-          example: 1.65
-        sex_id:
-          type: string
-          example: F
-        country_of_birth_id:
-          type: string
-          example: DE
-        name:
-          type: string
-          example: KLETTE
-        distinguishing_marks:
-          type: string
-          example: Birthmarks in the face
-        eyes_colors_id:
-          type: array
-          items:
-            type: string
-            example: BRO
-        hairs_id:
-          type: array
-          items:
-            type: string
-            example: BLA
-        place_of_birth:
-          type: string
-          example: KARLSRUHE
-        _embedded:
-          type: object
-          properties:
-            links:
-              type: array
-              items:
-                type: string
-        _links:
-          type: object
-          properties:
-            self:
-              type: object
-              properties:
-                href:
-                  type: string
-                  example: https://ws-public.interpol.int/notices/v1/red/1993-27493
-            images:
-              type: object
-              properties:
-                href:
-                  type: string
-                  example: https://ws-public.interpol.int/notices/v1/red/1993-27493/images
-            thumbnail:
-              type: object
-              properties:
-                href:
-                  type: string
-                  example: https://ws-public.interpol.int/notices/v1/red/1993-27493/images/59558401
