@@ -864,3 +864,9 @@ components:
                 href:
                   type: string
                   example: https://ws-public.interpol.int/notices/v1/red/1993-27493/images/59558401
+x-provenance:
+  method: harvested
+  publisher: Interpol
+  source: https://interpol.api.bund.dev/openapi.yaml
+  note: split by refine-openapis from the provider's own published document, verified by fetch (openapi/_original/*.fetch.json);
+    stamped by stamp-openapi-provenance.py (roadmap#793)
